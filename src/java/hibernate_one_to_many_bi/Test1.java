@@ -17,31 +17,39 @@ public class Test1 {
                     .addAnnotatedClass(Department.class)
                     .buildSessionFactory();
         try {
-         /*   session = factory.getCurrentSession();
-            Department dep = new Department("IT",1200,300);
+            session = factory.getCurrentSession();
+            Department dep = new Department("SALES",1500,800);
             Employee emp1 = new Employee("Fanil", "Akgtyomov", 800);
-            Employee emp2 = new Employee("Elena", "Smirnova", 1000);
+            Employee emp2 = new Employee("Elena", "Smirnova", 1500);
+            Employee emp3 = new Employee("Anton", "Sidorov", 1200);
             dep.addEmployeeToDepartment(emp1);
             dep.addEmployeeToDepartment(emp2);
+            dep.addEmployeeToDepartment(emp3);
 
             session.beginTransaction();
             session.save(dep);
 
             session.getTransaction().commit();
-            System.out.println("DONE");*/
+            System.out.println("DONE");
 
-
-           /* session = factory.getCurrentSession();
+//*************************************************************************
+            session = factory.getCurrentSession();
 
             session.beginTransaction();
-            Department department = session.get(Department.class, 1);
+            System.out.println("Get department");
+            Department department = session.get(Department.class, 4);
+
+            System.out.println("Show departmen");
             System.out.println(department);
+
+            System.out.println("Show employees of the department");
             System.out.println(department.getEmps());
 
             session.getTransaction().commit();
-            System.out.println("DONE");*/
-            //
+            System.out.println("DONE");
 
+/*
+******************************************************************
             session = factory.getCurrentSession();
 
 
@@ -51,6 +59,7 @@ public class Test1 {
 
             session.getTransaction().commit();
             System.out.println("DONE");
+*/
 
         }
         finally {
